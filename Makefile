@@ -22,6 +22,4 @@ finish:
 
 test: install
 
-	./bin/test.bash
-
 .PHONY: install finish test
