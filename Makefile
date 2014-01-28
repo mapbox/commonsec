@@ -1,6 +1,6 @@
 user?=gonzo
 port?=12345
-config_path=./out
+config_path=/etc
 
 test: config_path = ./test/etc
 
@@ -8,7 +8,7 @@ all: install finish
 
 install:
 
-	sed -e 's/%USER/$(user)/g' -e 's/%PORT/$(port)/g' < ./etc/sshd_config > $(config_path)/sshd_config
+	sed -e 's/%USER/$(user)/g' -e 's/%PORT/$(port)/g' < ./etc/ssh/sshd_config > $(config_path)/ssh/sshd_config
 
 	sed 's/%PORT/$(port)/g' ./etc/iptables.txt > $(config_path)/iptables.txt
 
