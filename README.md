@@ -24,6 +24,7 @@ port on which sshd should run.
 - Uses ip_conntrack to limit SSH login attempts
 - Disables SSH password login
 - Disables root login
+- Adds user to sudoers
 
 Warning, this will overwrite:
 
