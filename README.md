@@ -9,11 +9,14 @@ Tested on Ubuntu 12.04.
 
 ## Install
 
-`sudo make`
+`./bin/setup.bash /etc`
 
 or
 
-`sudo make user=foo port=23234`
+`./bin/setup.bash /etc kermit 22222`
+
+where "kermit" is the SSH user you'd like to grant SSH access, and 22222 is the
+port on which sshd should run.
 
 ## What it does
 
