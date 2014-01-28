@@ -9,11 +9,11 @@ Tested on Ubuntu 12.04.
 
 ## Install
 
-`./bin/setup.bash /etc`
+`./bin/setup.bash install /etc`
 
 or
 
-`./bin/setup.bash /etc kermit 22222`
+`./bin/setup.bash install /etc kermit 22222`
 
 where "kermit" is the SSH user you'd like to grant SSH access, and 22222 is the
 port on which sshd should run.
