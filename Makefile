@@ -19,6 +19,7 @@ finish:
 
 	restart ssh
 	/sbin/sysctl -p
+	iptables-restore < /etc/iptables.txt
 
 test: install
 
