@@ -20,6 +20,7 @@ port on which sshd should run.
 
 ## What it does
 
+- Creates login user for specified user
 - Allows SSH on specified port for specified user
 - Uses ip_conntrack to limit SSH login attempts
 - Disables SSH password login
