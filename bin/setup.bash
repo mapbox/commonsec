@@ -31,6 +31,7 @@ chmod 440 $config_path/sudoers.d/60_$user
 
 if [ "$op" = "install" ]; then
     restart ssh
+    modprobe ip_conntrack
     /sbin/sysctl -p
     iptables-restore < /etc/iptables.txt
 fi
