@@ -30,6 +30,11 @@ echo "$user ALL=NOPASSWD: ALL" > $config_path/sudoers.d/60_$user
 chmod 440 $config_path/sudoers.d/60_$user
 
 if [ "$op" = "install" ]; then
+    adduser --disabled-password --gecos "" $user
+    mkdir /home/$user/.ssh
+    touch /home/$user/.ssh/authorized_keys
+    chown -R "${user}:${user}" /home/$user/.ssh
+    chmod 700 /home/$user/.ssh
     restart ssh
     modprobe ip_conntrack
     /sbin/sysctl -p
