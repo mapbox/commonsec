@@ -4,7 +4,8 @@ ok="true"
 
 # Default
 mkdir -p ./test/etc/ssh
-./bin/setup.bash test ./test/etc
+mkdir -p ./test/etc/sudoers.d
+./bin/setup.bash -t
 
 diff ./test/etc/iptables.txt ./test/fixtures/iptables.txt.default
 
@@ -27,9 +28,10 @@ else
 fi
 
 # Override
-rm -r ./test/etc
+rm -rf ./test/etc
 mkdir -p ./test/etc/ssh
-./bin/setup.bash test ./test/etc kermit 22222
+mkdir -p ./test/etc/sudoers.d
+./bin/setup.bash -t -u kermit -p 22222
 
 diff ./test/etc/iptables.txt ./test/fixtures/iptables.txt.override
 
@@ -50,4 +52,4 @@ if [ "$ok" = "true" ]; then
 else
     echo "Tests failed for override templating"
 fi
-rm -r ./test/etc
+rm -rf ./test/etc
