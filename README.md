@@ -9,14 +9,12 @@ Tested on Ubuntu 12.04.
 
 ## Install
 
-`./bin/setup.bash install /etc`
+`./bin/setup.bash`
 
-or
+#### Optional arguments
 
-`./bin/setup.bash install /etc kermit 22222`
-
-where "kermit" is the SSH user you'd like to grant SSH access, and 22222 is the
-port on which sshd should run.
+- -p <port-number>
+- -u <user>
 
 ## What it does
 
@@ -31,3 +29,4 @@ Warning, this will overwrite:
 
 - /etc/ssh/sshd_config
 - Your iptables settings
+- Make modifications in /etc/sudoers.d
