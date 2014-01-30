@@ -13,8 +13,8 @@ Tested on Ubuntu 12.04.
 
 #### Optional arguments
 
-- -p <port-number>
-- -u <user>
+- -p `<port-number>`
+- -u `<user>`
 
 ## What it does
 
