@@ -1,0 +1,7 @@
+env:
+  global:
+  - AWS_ACCESS_KEY_ID: AKIAJD5EECEBQBS62PAQ
+  - secure: S/SoLl8YHYwPDgt+KChhy5kenMcET2oz7a5y2HmIuq4YXbgtNftsXkt9s+tPqxkwn8xgYDGnPBatPfagjF2CzSohB7hp9yiebjpxUt0fiXScXyancPBgm+qwnvCSJ3ha0WqjOjJt6dJVP/xSbaDh4Od03B06Rwmpjl45R9LJB8g=
+script:
+- curl -sSf https://raw.githubusercontent.com/mapbox/build2s3/v0.0.1/bin/build2s3.bash
+  | bash -s "mapbox-npm/packages"
