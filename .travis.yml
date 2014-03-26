@@ -1,3 +1,4 @@
+language: python
 env:
   global:
   - AWS_ACCESS_KEY_ID: AKIAJD5EECEBQBS62PAQ
