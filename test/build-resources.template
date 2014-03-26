@@ -17,7 +17,7 @@
                                     ],
                                     "Effect": "Allow",
                                     "Resource": [
-                                        "arn:aws:s3:::mapbox-npm/packages/commonsec-*"
+                                        "arn:aws:s3:::mapbox-npm/package/commonsec-*"
                                     ]
                                 }
                             ]
